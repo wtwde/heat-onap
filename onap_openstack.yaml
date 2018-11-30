@@ -707,7 +707,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt dns_install.sh
@@ -764,103 +763,6 @@ resources:
             __aai_repo__: { get_param: aai_repo }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -883,7 +785,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt aai_install.sh
@@ -937,103 +838,6 @@ resources:
             __aai_repo__: { get_param: aai_repo }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -1055,7 +859,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt aai_install.sh
@@ -1116,103 +919,6 @@ resources:
             __so_repo__: { get_param: so_repo }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -1239,7 +945,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt so_install.sh
@@ -1293,103 +998,6 @@ resources:
             __dbcl_docker__: { get_param: dbcl_docker }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -1409,7 +1017,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt mr_install.sh
@@ -1500,103 +1107,6 @@ resources:
             __use_oam_net_for_robot__: { get_param: use_oam_net_for_robot }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -1662,7 +1172,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt robot_install.sh
@@ -1716,103 +1225,6 @@ resources:
             __vid_repo__: { get_param: vid_repo }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -1832,7 +1244,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt vid_install.sh
@@ -1887,103 +1298,6 @@ resources:
             __sdnc_repo__: { get_param: sdnc_repo }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -2004,7 +1318,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt sdnc_install.sh
@@ -2071,103 +1384,6 @@ resources:
             __sdc_repo__: { get_param: sdc_repo }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -2191,7 +1407,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt sdc_install.sh
@@ -2247,103 +1462,6 @@ resources:
             __portal_repo__: { get_param: portal_repo }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -2365,7 +1483,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt portal_install.sh
@@ -2420,103 +1537,6 @@ resources:
             __policy_repo__: { get_param: policy_repo }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -2537,7 +1557,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt policy_install.sh
@@ -2593,103 +1612,6 @@ resources:
             __appc_repo__: { get_param: appc_repo }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -2711,7 +1633,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt appc_install.sh
@@ -2771,103 +1692,6 @@ resources:
             __clamp_repo__: { get_param: clamp_repo }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -2893,7 +1717,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt clamp_install.sh
@@ -2983,103 +1806,6 @@ resources:
             __vfc_wfengine_activiti_docker__: { get_param: vfc_wfengine_activiti_docker }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -3138,7 +1864,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt openo_install.sh
@@ -3268,103 +1993,6 @@ resources:
 
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -3454,7 +2082,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt dcae2_install.sh
@@ -3508,103 +2135,6 @@ resources:
             __external_dns__: { get_param: external_dns }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -3624,7 +2154,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt music_install.sh
@@ -3681,103 +2210,6 @@ resources:
             __external_dns__: { get_param: external_dns }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -3800,7 +2232,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt oof_install.sh
@@ -3855,103 +2286,6 @@ resources:
             __local_ip__: { get_param: aaf_ip_addr }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -3972,7 +2306,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt aaf_install.sh
@@ -4026,103 +2359,6 @@ resources:
             __local_ip__: { get_param: sms_ip_addr }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -4143,7 +2379,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt sms_install.sh
@@ -4199,103 +2434,6 @@ resources:
             __so_ip_addr__: { get_param: so_ip_addr }
           template: |
             #!/bin/bash
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
-            apt-get -y update
-            mkdir -p /etc/docker
-            cat > /etc/docker/daemon.json <<EOF
-            {
-              "insecure-registries" : ["192.168.137.100"]
-            }
-            EOF
             apt-get -y update
 
             # Create configuration files
@@ -4318,7 +2456,6 @@ resources:
             # Download and run install script
             apt-get -y install unzip
             apt-get -y install wget
-            wget http://192.168.31.2:9999/download/ca.crt -P /etc/docker/certs.d/192.168.137.100/
             if [[ "__artifacts_version__" =~ "SNAPSHOT" ]]; then REPO=snapshots; else REPO=releases; fi
             curl -k -L "__nexus_artifact_repo__/service/local/artifact/maven/redirect?r=${REPO}&g=org.onap.demo&a=boot&e=zip&v=__artifacts_version__" -o /opt/boot-__artifacts_version__.zip
             unzip -j /opt/boot-__artifacts_version__.zip -d /opt nbi_install.sh
