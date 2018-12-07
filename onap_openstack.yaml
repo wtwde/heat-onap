@@ -523,6 +523,21 @@ parameters:
   oof_branch:
     type: string
 
+#
+#  add my parameter
+#
+
+  my_network_type:
+    type: string
+    description: network type
+    default: vlan
+
+  my_physical_network:
+    type: string
+    description: physical network
+    default: default
+
+
 #############
 #           #
 # RESOURCES #
@@ -580,13 +595,16 @@ resources:
 
   # ONAP management private network
   oam_onap:
-    type: OS::Neutron::Net
+    type: OS::Neutron::ProviderNet
     properties:
-      name:
-        str_replace:
-          template: oam_onap_rand
-          params:
-            rand: { get_resource: random-str }
+      name: cmcc_network
+#        str_replace:
+#          template: oam_onap_rand
+#          params:
+#            rand: { get_resource: random-str }
+      network_type: { get_param: my_network_type }
+      physical_network: { get_param: my_physical_network }
+      segmentation_id: "2002"
 
   oam_onap_subnet:
     type: OS::Neutron::Subnet
@@ -1061,7 +1079,7 @@ resources:
             __nexus_docker_repo__: { get_param: nexus_docker_repo }
             __nexus_username__: { get_param: nexus_username }
             __nexus_password__: { get_param: nexus_password }
-            __network_name__: { get_attr: [oam_onap, name] }
+            __network_name__: cmcc_network
             __openstack_username__: { get_param: openstack_username }
             __openstack_api_key__: { get_param : openstack_api_key }
             __openstack_tenant_id__: { get_param: openstack_tenant_id }
@@ -1942,7 +1960,7 @@ resources:
             __dcaeos_key_name__: { get_resource: vm_key }
             __dcaeos_public_key__: { get_param: dcae_public_key }
             __dcaeos_private_key__: { get_param: dcae_private_key }
-            __dcaeos_private_network_name__: { get_attr: [oam_onap, name] }
+            __dcaeos_private_network_name__: cmcc_network
             __dcaeos_public_network_name__: { get_param: public_net_name }
             __dcaeos_ubuntu_1604_image__: { get_param: ubuntu_1604_image }
             __dcaeos_centos_7_image__: { get_param: dcae_centos_7_image }
